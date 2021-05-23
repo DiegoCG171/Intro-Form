@@ -1,0 +1,224 @@
+.login {
+    background-color: var(--color-primary);
+    background-image: url("https://res.cloudinary.com/dmfhnhyyj/image/upload/v1621660433/Intro%20form/bg-intro-mobile_da72mo.png");
+    background-repeat: repeat-y;
+    background-size: auto;
+    min-height: 100vh;
+    padding: 5.5em 1.5em;
+
+    &__title,
+    &__description {
+        color: var(--color-text-white);
+        text-align: center;
+    }
+
+    &__title {
+        font-size: var(--font-size-title);
+        font-weight: var(--font-weight-bold);
+        line-height: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    &__description {
+        font-weight: var(--font-weight-medium);
+        line-height: 1.5em;
+        margin-bottom: 4em;
+    }
+
+    &__offer {
+        background-color: var(--color-acent-blue);
+        border-radius: 0.5em;
+        box-shadow: var(--shadow);
+        padding: 1.3em 3em;
+        margin-bottom: 1.5em;
+
+        &-text {
+            color: var(--color-text-white);
+            text-align: center;
+            line-height: 1.5em;
+
+            b {
+                font-weight: var(--font-weight-bold);
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-text-white);
+            border-radius: 0.5em;
+            box-shadow: var(--shadow);
+            padding: 1.5em;
+            padding-bottom: 2em;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+
+        &-input {
+            color: var(--color-text-form);
+            border: 0.5px solid var(--color-border);
+            border-radius: 0.25em;
+            flex: 1;
+            font-weight: var(--font-weight-bold);
+            padding: 1em;
+
+            &:focus {
+                border-color: var(--color-acent-blue);
+                outline: none;
+            }
+
+            &-container {
+                display: flex;
+                width: 100%;
+                align-items: center;
+
+                .error-icon {
+                    position: absolute;
+                    right: 4em;
+                    z-index: 10;
+                }
+            }
+        }
+
+        &-button {
+            background-color: var(--color-action-green);
+            border: none;
+            border-bottom: 5px outset var(--color-border);
+            border-radius: 0.5em;
+            color: var(--color-text-white);
+            cursor: pointer;
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            padding: 1.2em;
+
+            &:active {
+                opacity: 0.6;
+            }
+        }
+
+        &-terms {
+            color: var(--color-text);
+            font-size: 10px;
+            font-weight: var(--font-weight-semi-bold);
+            margin-top: 1.5em;
+            line-height: 2em;
+            padding: 0 3em;
+            text-align: center;
+
+            b {
+                color: var(--color-action-error);
+                font-weight: var(--font-weight-bold);
+            }
+        }
+
+        &-error {
+            color: var(--color-action-error);
+            display: flex;
+            font-style: italic;
+            font-size: 10px;
+            font-weight: var(--font-weight-medium);
+            justify-content: flex-end;
+            width: 100%;
+            margin-top: 0.6em;
+            margin-bottom: 1.8em;
+        }
+    }
+}
+
+.error {
+    border: 2px solid var(--color-action-error);
+    
+    &:focus {
+        border: 2px solid var(--color-action-error);
+    }
+
+    &::placeholder {
+        color: var(--color-action-error);
+    }
+}
+
+@media (min-width: 960px) {
+    .login {
+        background-image: url("https://res.cloudinary.com/dmfhnhyyj/image/upload/v1621660435/Intro%20form/bg-intro-desktop_xpsp6s.png");
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5.5em 5em;
+
+        &__title,
+        &__description {
+            color: var(--color-text-white);
+            text-align: start;
+            
+        }
+
+        &__title {
+            font-size: var(--font-size-title);
+            width: 80%;
+        }
+
+        &__description {
+            font-weight: var(--font-weight-medium);
+            line-height: 1.5em;
+            margin-bottom: 4em;
+            width: 100%;
+        }
+
+        &__data {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+        }
+
+        &__form {
+
+            &-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &-input {
+                
+    
+                &-container {
+    
+                    .error-icon {
+                        position: absolute;
+                        right: 13em;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .login {
+
+        &__form {
+
+            &-input {
+                
+                &-container {
+    
+                    .error-icon {
+                        position: absolute;
+                        right: 14em;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
+}
