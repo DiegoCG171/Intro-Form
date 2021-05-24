@@ -20,10 +20,10 @@ export const SingUpForm = () => {
     })
 
     const { form, handleChange } = useForm<FormData>({
-        firstName: 'Diego',
-        lastName: 'Ceron',
-        email: 'test@gmail.com',
-        password: '12345678'
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: ''
     });
 
     const { firstName, lastName, email, password } = form;
