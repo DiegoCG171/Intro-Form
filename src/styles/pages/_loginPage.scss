@@ -95,14 +95,9 @@
             border-bottom: 5px outset var(--color-border);
             border-radius: 0.5em;
             color: var(--color-text-white);
-            cursor: pointer;
             font-weight: var(--font-weight-bold);
             text-transform: uppercase;
             padding: 1.2em;
-
-            &:active {
-                opacity: 0.6;
-            }
         }
 
         &-terms {
@@ -131,18 +126,6 @@
             margin-top: 0.6em;
             margin-bottom: 1.8em;
         }
-    }
-}
-
-.error {
-    border: 2px solid var(--color-action-error);
-    
-    &:focus {
-        border: 2px solid var(--color-action-error);
-    }
-
-    &::placeholder {
-        color: var(--color-action-error);
     }
 }
 
@@ -190,26 +173,6 @@
             &-input {
                 
     
-                &-container {
-    
-                    .error-icon {
-                        position: absolute;
-                        right: 13em;
-                        z-index: 10;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 1440px) {
-    .login {
-
-        &__form {
-
-            &-input {
-                
                 &-container {
     
                     .error-icon {
